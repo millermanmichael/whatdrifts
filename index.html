@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Drift Archive</title>
+<meta name="description" content="Things the internet forgot, made beautiful.">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: #fafafa;
+  color: #1a1a1a;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  padding: 3rem 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+h1 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 3rem;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 2rem;
+}
+.card {
+  border: 1px solid #e0e0e0;
+  padding: 1.5rem;
+  transition: border-color 0.2s;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.card:hover { border-color: #1a1a1a; }
+.card-title {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+.card-date {
+  font-size: 0.8rem;
+  color: #999;
+}
+.empty {
+  color: #bbb;
+  font-style: italic;
+  text-align: center;
+  margin-top: 4rem;
+}
+footer {
+  margin-top: 4rem;
+  text-align: center;
+  color: #ccc;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+</style>
+</head>
+<body>
+<h1>Drift Archive</h1>
+
+<div class="grid" id="grid"></div>
+
+<p class="empty" id="empty-state">The archive is empty. The trawler is searching.</p>
+
+<footer>Things the internet forgot.</footer>
+
+<script>
+fetch('manifest.txt')
+  .then(r => r.ok ? r.text() : '')
+  .then(text => {
+    const files = text.trim().split('\n').filter(Boolean).reverse();
+    if (files.length === 0) return;
+    document.getElementById('empty-state').style.display = 'none';
+    const grid = document.getElementById('grid');
+    files.forEach(file => {
+      const date = file.substring(0, 10);
+      const name = file.substring(11).replace(/\.(html|svg)$/, '').replace(/-/g, ' ');
+      const a = document.createElement('a');
+      a.href = 'pieces/' + file;
+      a.className = 'card';
+      a.innerHTML = `<div class="card-title">${name}</div><div class="card-date">${date}</div>`;
+      grid.appendChild(a);
+    });
+  })
+  .catch(() => {});
+</script>
+</body>
+</html>
