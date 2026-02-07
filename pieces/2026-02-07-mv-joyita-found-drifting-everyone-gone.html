@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MV Joyita</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: #0a0a0a;
+            color: #fafafa;
+            font-family: 'Courier New', monospace;
+            line-height: 1.6;
+            padding: 2rem 1rem;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        
+        .vessel-name {
+            font-size: 1.1rem;
+            letter-spacing: 0.15em;
+            margin-bottom: 4rem;
+            font-weight: normal;
+        }
+        
+        .departed {
+            margin-bottom: 1rem;
+            color: #888;
+        }
+        
+        .route {
+            margin-bottom: 4rem;
+            font-size: 0.95rem;
+        }
+        
+        .distance {
+            height: 600px;
+            margin: 6rem 0;
+            position: relative;
+        }
+        
+        .distance-line {
+            width: 2px;
+            height: 100%;
+            background: #1a3a52;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .marker {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+        
+        .marker-departed {
+            top: 0;
+            color: #fafafa;
+        }
+        
+        .marker-found {
+            bottom: 0;
+            color: #1a3a52;
+        }
+        
+        .found-date {
+            margin-bottom: 3rem;
+        }
+        
+        .coordinates {
+            color: #1a3a52;
+            margin-bottom: 4rem;
+            font-size: 0.9rem;
+        }
+        
+        .manifest {
+            margin: 4rem 0 6rem 0;
+        }
+        
+        .manifest-list {
+            list-style: none;
+            font-size: 0.9rem;
+            line-height: 2;
+        }
+        
+        .count {
+            display: inline-block;
+            width: 3ch;
+            text-align: right;
+            margin-right: 1ch;
+            color: #888;
+        }
+        
+        .section-gap {
+            height: 8rem;
+        }
+        
+        .inventory {
+            margin: 4rem 0;
+        }
+        
+        .inventory-item {
+            margin-bottom: 2.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .item-status {
+            color: #888;
+            margin-top: 0.25rem;
+        }
+        
+        .radio-section {
+            margin: 6rem 0;
+            padding: 3rem 0;
+        }
+        
+        .radio-freq {
+            color: #1a3a52;
+            font-size: 1.1rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cable-visual {
+            margin: 2rem 0 3rem 0;
+            font-family: monospace;
+            font-size: 0.75rem;
+            line-height: 1.4;
+            color: #888;
+        }
+        
+        .severed {
+            color: #1a3a52;
+        }
+        
+        .empty-section {
+            height: 400px;
+        }
+        
+        .inquiry {
+            margin: 6rem 0;
+            font-size: 0.85rem;
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        .final-gap {
+            height: 12rem;
+        }
+        
+        .attribution {
+            margin-top: 8rem;
+            padding-top: 2rem;
+            border-top: 1px solid #222;
+            font-size: 0.7rem;
+            color: #444;
+            text-align: center;
+        }
+        
+        .attribution a {
+            color: #444;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 600px) {
+            body {
+                padding: 1.5rem 1rem;
+            }
+            
+            .vessel-name {
+                font-size: 1rem;
+                margin-bottom: 3rem;
+            }
+            
+            .distance {
+                height: 400px;
+                margin: 4rem 0;
+            }
+            
+            .section-gap {
+                height: 5rem;
+            }
+            
+            .empty-section {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="vessel-name">MV JOYITA</div>
+        
+        <div class="departed">October 3, 1955</div>
+        <div class="route">Samoa → Tokelau Islands</div>
+        
+        <div class="manifest">
+            <div class="manifest-list">
+                <div><span class="count">16</span> crew</div>
+                <div><span class="count">9</span> passengers</div>
+                <div style="margin-top: 1rem; color: #888;">medical supplies</div>
+                <div style="color: #888;">timber</div>
+                <div style="color: #888;">empty oil drums</div>
+            </div>
+        </div>
+        
+        <div class="distance">
+            <div class="distance-line">
+                <div class="marker marker-departed">departed</div>
+                <div class="marker marker-found">found</div>
+            </div>
+        </div>
+        
+        <div class="found-date">November 10, 1955</div>
+        <div class="coordinates">600 miles off course</div>
+        
+        <div class="section-gap"></div>
+        
+        <div class="inventory">
+            <div class="inventory-item">
+                <div>cargo hold</div>
+                <div class="item-status">flooded</div>
+            </div>
+            
+            <div class="inventory-item">
+                <div>logbooks</div>
+                <div class="item-status">missing</div>
+            </div>
+            
+            <div class="inventory-item">
+                <div>food stores</div>
+                <div class="item-status">missing</div>
+            </div>
+            
+            <div class="inventory-item">
+                <div>doctor's bag</div>
+                <div class="item-status">open on deck, contents scattered</div>
+            </div>
+        </div>
+        
+        <div class="section-gap"></div>
+        
+        <div class="radio-section">
+            <div class="radio-freq">INTERNATIONAL DISTRESS FREQUENCY</div>
+            <div style="color: #888; font-size: 0.85rem; margin-bottom: 2rem;">radio tuned, ready</div>
+            
+            <div class="cable-visual">
+━━━━━━━━━━━━━━━━━━━━━━━━━━━<span class="severed">╳</span>
+                
+                
+                
+                
+                
+deck</div>
+            
+            <div style="color: #666; font-size: 0.85rem; margin-top: 2rem;">cable severed</div>
+            <div style="color: #666; font-size: 0.85rem;">inches short</div>
+        </div>
+        
+        <div class="empty-section"></div>
+        
+        <div class="inquiry">
+            Official conclusion: corroded pipe, slow flooding, abandonment to lifeboats.
+        </div>
+        
+        <div class="section-gap"></div>
+        
+        <div style="font-size: 0.85rem; color: #888; line-height: 2;">
+            <div>lifeboats: never found</div>
+            <div>bodies: never found</div>
+            <div>distress signal: never sent</div>
+        </div>
+        
+        <div class="section-gap"></div>
+        
+        <div style="font-size: 0.85rem; color: #444;">
+            37 days adrift
+        </div>
+        
+        <div class="final-gap"></div>
+        
+        <div class="attribution">
+            <a href="https://en.wikipedia.org/wiki/MV_Joyita" target="_blank">wikipedia.org/wiki/MV_Joyita</a>
+        </div>
+        
+        <div style="height: 50vh;"></div>
+    </div>
+</body>
+</html>
