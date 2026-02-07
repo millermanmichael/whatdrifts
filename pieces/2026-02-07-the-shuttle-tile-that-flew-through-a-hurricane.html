@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shuttle Tile Flight Test</title>
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  background: #0a0a0a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Courier New', monospace;
+}
+svg {
+  max-width: 100%;
+  height: auto;
+}
+</style>
+</head>
+<body>
+<svg viewBox="0 0 1080 1350" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1080" height="1350" fill="#0a0a0a"/>
+  
+  <!-- Upper atmosphere / space -->
+  <text x="540" y="180" font-family="Courier New, monospace" font-size="16" fill="#666" text-anchor="middle" letter-spacing="3">
+    DESIGNED FOR
+  </text>
+  <text x="540" y="240" font-family="Courier New, monospace" font-size="72" fill="#e8f4f8" text-anchor="middle" font-weight="bold">
+    2,300°F
+  </text>
+  <text x="540" y="280" font-family="Courier New, monospace" font-size="14" fill="#666" text-anchor="middle">
+    thin upper atmosphere
+  </text>
+  <text x="540" y="305" font-family="Courier New, monospace" font-size="14" fill="#666" text-anchor="middle">
+    re-entry
+  </text>
+  <text x="540" y="330" font-family="Courier New, monospace" font-size="14" fill="#666" text-anchor="middle">
+    silence
+  </text>
+
+  <!-- The tile (ceramic square) -->
+  <rect x="490" y="420" width="100" height="100" fill="none" stroke="#e8f4f8" stroke-width="3"/>
+  <rect x="495" y="425" width="90" height="90" fill="#0a0a0a" stroke="#e8f4f8" stroke-width="1" opacity="0.3"/>
+  
+  <!-- Mounting fixture suggestion -->
+  <line x1="540" y1="520" x2="540" y2="580" stroke="#666" stroke-width="2"/>
+  <rect x="520" y="580" width="40" height="8" fill="#666"/>
+
+  <!-- Arrow down -->
+  <line x1="540" y1="640" x2="540" y2="720" stroke="#e8f4f8" stroke-width="1" stroke-dasharray="4 4"/>
+  <polygon points="540,720 535,710 545,710" fill="#e8f4f8"/>
+
+  <!-- Lower atmosphere / hurricane -->
+  <text x="540" y="820" font-family="Courier New, monospace" font-size="16" fill="#666" text-anchor="middle" letter-spacing="3">
+    TESTED IN
+  </text>
+  <text x="540" y="880" font-family="Courier New, monospace" font-size="72" fill="#e8f4f8" text-anchor="middle" font-weight="bold">
+    150 mph
+  </text>
+  <text x="540" y="920" font-family="Courier New, monospace" font-size="14" fill="#666" text-anchor="middle">
+    dense convective air
+  </text>
+  <text x="540" y="945" font-family="Courier New, monospace" font-size="14" fill="#666" text-anchor="middle">
+    hurricane eyewall
+  </text>
+  <text x="540" y="970" font-family="Courier New, monospace" font-size="14" fill="#666" text-anchor="middle">
+    rain
+  </text>
+
+  <!-- Date and aircraft -->
+  <text x="540" y="1080" font-family="Courier New, monospace" font-size="13" fill="#e8f4f8" text-anchor="middle" letter-spacing="1">
+    FEBRUARY 4, 1987
+  </text>
+  <text x="540" y="1110" font-family="Courier New, monospace" font-size="11" fill="#666" text-anchor="middle">
+    NOAA WP-3D Orion
+  </text>
+  <text x="540" y="1130" font-family="Courier New, monospace" font-size="11" fill="#666" text-anchor="middle">
+    Flight Test Fixture
+  </text>
+
+  <!-- Source -->
+  <text x="540" y="1310" font-family="Courier New, monospace" font-size="9" fill="#333" text-anchor="middle">
+    nasa.gov/image/EC87-0035-001
+  </text>
+</svg>
+</body>
+</html>
