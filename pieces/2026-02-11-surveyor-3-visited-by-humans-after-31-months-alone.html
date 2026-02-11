@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Surveyor 3</title>
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  background: #0a0a0a;
+  color: #fafafa;
+  font-family: 'Courier New', monospace;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.date {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #d4c5b0;
+  margin-bottom: 40px;
+}
+
+.location {
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin-bottom: 60px;
+  color: #666;
+}
+
+.data {
+  font-size: 14px;
+  margin-bottom: 100px;
+}
+
+.data-line {
+  margin-bottom: 8px;
+}
+
+.label {
+  color: #666;
+  display: inline-block;
+  width: 180px;
+}
+
+.value {
+  color: #fafafa;
+}
+
+.section {
+  margin-bottom: 120px;
+}
+
+.images-sent {
+  font-size: 28px;
+  color: #d4c5b0;
+  margin-bottom: 100px;
+  letter-spacing: 3px;
+}
+
+.silence {
+  height: 400px;
+}
+
+.temperature {
+  font-size: 13px;
+  margin-bottom: 8px;
+  color: #888;
+}
+
+.duration {
+  font-size: 48px;
+  font-weight: bold;
+  color: #d4c5b0;
+  margin: 80px 0;
+  letter-spacing: 2px;
+}
+
+.visit {
+  margin-top: 120px;
+}
+
+.distance {
+  font-size: 16px;
+  margin-bottom: 60px;
+}
+
+.actions {
+  font-size: 13px;
+  line-height: 2.2;
+  color: #888;
+  margin-bottom: 80px;
+}
+
+.removed {
+  margin-top: 60px;
+  padding-left: 20px;
+  border-left: 1px solid #d4c5b0;
+}
+
+.removed-item {
+  font-size: 12px;
+  margin-bottom: 6px;
+  color: #fafafa;
+}
+
+.remains {
+  margin-top: 200px;
+  font-size: 14px;
+  text-align: center;
+  color: #666;
+}
+
+.final-space {
+  height: 60vh;
+}
+
+.source {
+  font-size: 9px;
+  color: #333;
+  text-align: center;
+  padding: 40px 20px;
+  letter-spacing: 1px;
+}
+
+.source a {
+  color: #333;
+  text-decoration: none;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  
+  <div class="date">APRIL 19, 1967</div>
+  <div class="location">Ocean of Storms</div>
+  
+  <div class="section">
+    <div class="data">
+      <div class="data-line">
+        <span class="label">Landing coordinates</span>
+        <span class="value">2.94°S 23.34°W</span>
+      </div>
+      <div class="data-line">
+        <span class="label">Mission type</span>
+        <span class="value">Unmanned soft landing</span>
+      </div>
+      <div class="data-line">
+        <span class="label">Television camera</span>
+        <span class="value">Active</span>
+      </div>
+      <div class="data-line">
+        <span class="label">Soil sampler</span>
+        <span class="value">Active</span>
+      </div>
+    </div>
+    
+    <div class="images-sent">6,315</div>
+  </div>
+  
+  <div class="silence"></div>
+  
+  <div class="section">
+    <div class="temperature">-173°C to 117°C</div>
+    <div class="temperature">No atmosphere</div>
+    <div class="temperature">Micrometeorite impacts</div>
+    <div class="temperature">Solar radiation</div>
+    
+    <div class="duration">31 months</div>
+  </div>
+  
+  <div class="visit">
+    <div class="date">NOVEMBER 20, 1969</div>
+    
+    <div class="distance">600 feet</div>
+    
+    <div class="actions">
+      Charles Conrad Jr.<br>
+      Alan L. Bean<br>
+      <br>
+      Walked over during second EVA<br>
+      Photographed from every angle<br>
+      Examined<br>
+      Touched
+    </div>
+    
+    <div class="removed">
+      <div class="removed-item">Television camera</div>
+      <div class="removed-item">Soil scoop</div>
+      <div class="removed-item">Tubing</div>
+      <div class="removed-item">Electrical cable</div>
+    </div>
+  </div>
+  
+  <div class="remains">
+    The only spacecraft ever visited by humans<br>
+    after its mission ended
+  </div>
+  
+  <div class="final-space"></div>
+  
+</div>
+
+<div class="source">
+  <a href="https://images-assets.nasa.gov/image/AS12-48-7099/collection.json">NASA Image Collection</a>
+</div>
+
+</body>
+</html>
