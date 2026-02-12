@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Surveyor 3</title>
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  background: #0a0a0a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Courier New', monospace;
+}
+svg {
+  max-width: 100%;
+  height: auto;
+}
+.source {
+  position: fixed;
+  bottom: 12px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 8px;
+  color: #333;
+  font-family: sans-serif;
+}
+.source a {
+  color: #333;
+  text-decoration: none;
+}
+</style>
+</head>
+<body>
+
+<svg viewBox="0 0 1080 1350" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1080" height="1350" fill="#0a0a0a"/>
+  
+  <!-- Title -->
+  <text x="540" y="120" font-family="'Courier New', monospace" font-size="28" fill="#fafafa" text-anchor="middle" letter-spacing="8">SURVEYOR 3</text>
+  
+  <!-- Launch to Moon -->
+  <circle cx="200" cy="280" r="3" fill="#f5e6d3"/>
+  <text x="200" y="310" font-family="'Courier New', monospace" font-size="11" fill="#666" text-anchor="middle">APRIL 17, 1967</text>
+  <text x="200" y="328" font-family="'Courier New', monospace" font-size="9" fill="#444" text-anchor="middle">LAUNCH</text>
+  
+  <line x1="203" y1="280" x2="537" y2="280" stroke="#f5e6d3" stroke-width="1" stroke-dasharray="2,4"/>
+  
+  <circle cx="540" cy="280" r="5" fill="#f5e6d3"/>
+  <text x="540" y="310" font-family="'Courier New', monospace" font-size="11" fill="#fafafa" text-anchor="middle">APRIL 19, 1967</text>
+  <text x="540" y="328" font-family="'Courier New', monospace" font-size="9" fill="#999" text-anchor="middle">OCEAN OF STORMS</text>
+  
+  <!-- Images transmitted -->
+  <text x="540" y="420" font-family="'Courier New', monospace" font-size="72" fill="#f5e6d3" text-anchor="middle" font-weight="bold">6,315</text>
+  <text x="540" y="450" font-family="'Courier New', monospace" font-size="12" fill="#666" text-anchor="middle">IMAGES TRANSMITTED</text>
+  
+  <!-- Silence period -->
+  <line x1="540" y1="500" x2="540" y2="650" stroke="#333" stroke-width="1"/>
+  
+  <text x="540" y="575" font-family="'Courier New', monospace" font-size="10" fill="#444" text-anchor="middle">31 MONTHS</text>
+  <text x="540" y="595" font-family="'Courier New', monospace" font-size="9" fill="#333" text-anchor="middle">-173°C TO 117°C</text>
+  
+  <!-- Apollo 12 arrival -->
+  <circle cx="540" cy="680" r="6" fill="#fafafa"/>
+  <text x="540" y="710" font-family="'Courier New', monospace" font-size="11" fill="#fafafa" text-anchor="middle">NOVEMBER 20, 1969</text>
+  <text x="540" y="728" font-family="'Courier New', monospace" font-size="9" fill="#999" text-anchor="middle">CONRAD & BEAN</text>
+  <text x="540" y="746" font-family="'Courier New', monospace" font-size="9" fill="#666" text-anchor="middle">600 FEET AWAY</text>
+  
+  <!-- The split -->
+  <line x1="540" y1="790" x2="340" y2="900" stroke="#f5e6d3" stroke-width="1"/>
+  <line x1="540" y1="790" x2="740" y2="900" stroke="#333" stroke-width="1"/>
+  
+  <!-- Camera comes home -->
+  <circle cx="340" cy="900" r="4" fill="#f5e6d3"/>
+  <text x="340" y="930" font-family="'Courier New', monospace" font-size="10" fill="#f5e6d3" text-anchor="middle">CAMERA</text>
+  <text x="340" y="948" font-family="'Courier New', monospace" font-size="8" fill="#666" text-anchor="middle">238,855 MILES</text>
+  
+  <line x1="340" y1="960" x2="340" y2="1020" stroke="#f5e6d3" stroke-width="1"/>
+  
+  <text x="340" y="1050" font-family="'Courier New', monospace" font-size="9" fill="#999" text-anchor="middle">SMITHSONIAN</text>
+  <text x="340" y="1068" font-family="'Courier New', monospace" font-size="9" fill="#999" text-anchor="middle">NATIONAL AIR AND</text>
+  <text x="340" y="1086" font-family="'Courier New', monospace" font-size="9" fill="#999" text-anchor="middle">SPACE MUSEUM</text>
+  
+  <!-- Spacecraft stays -->
+  <circle cx="740" cy="900" r="3" fill="#333"/>
+  <text x="740" y="930" font-family="'Courier New', monospace" font-size="10" fill="#444" text-anchor="middle">SURVEYOR 3</text>
+  
+  <line x1="740" y1="940" x2="740" y2="1100" stroke="#222" stroke-width="1"/>
+  
+  <circle cx="740" cy="1100" r="2" fill="#222"/>
+  
+  <!-- Distance -->
+  <line x1="340" y1="1140" x2="740" y2="1140" stroke="#1a1a1a" stroke-width="1" stroke-dasharray="1,3"/>
+  <text x="540" y="1170" font-family="'Courier New', monospace" font-size="8" fill="#333" text-anchor="middle">THEY WILL NEVER SEE EACH OTHER AGAIN</text>
+  
+</svg>
+
+<div class="source">
+  <a href="https://images-assets.nasa.gov/image/as12-48-7110/collection.json" target="_blank">NASA</a>
+</div>
+
+</body>
+</html>
